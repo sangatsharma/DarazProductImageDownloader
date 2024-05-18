@@ -9,7 +9,7 @@ const cors = require("cors");
 // Enable CORS to allow requests from your frontend
 app.use(
   cors({
-    origin: ["https://sangatsharma.github.io/DarazProductImageDownloader/"], // Replace with your frontend URL
+    origin: ["https://sangatsharma.github.io/DarazProductImageDownloader"], // Replace with your frontend URL
     methods: ["GET", "POST"], // Allowed methods
     allowedHeaders: ["Content-Type"], // Allowed headers
     preflightContinue: true, // Stop preflight request
