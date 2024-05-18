@@ -1,4 +1,4 @@
-module.exports = async (req, res) => {
+//module.exports = async (req, res) => {
 //   if (req.method === "POST") {
 //     const { url, format } = req.body;
 //     try {
