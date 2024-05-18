@@ -10,5 +10,10 @@
     "watchpack": "^2.4.1",
     "watchpack-chokidar2": "^2.0.1",
     "webpack": "^5.91.0"
-  }
+  },    
+  "scripts": {
+      "build": "mkdir -p dist && cp -r * dist"
+    }
+  
+  
 }
