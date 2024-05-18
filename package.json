@@ -12,8 +12,10 @@
     "webpack": "^5.91.0"
   },    
   "scripts": {
-      "build": "mkdir -p dist && cp -r * dist"
-    }
+    "build": "netlify deploy --prod"
+  }
+  
+  
   
   
 }
