@@ -11,7 +11,7 @@ app.use(cors({
   origin: ['https://sangatsharma.github.io/DarazProductImageDownloader'], // Replace with your frontend URL
   methods: ['GET', 'POST'], // Allowed methods
    allowedHeaders: ['Content-Type'], // Allowed headers
-   preflightContinue: true, // Stop preflight request
+    preflightContinue: true, // Stop preflight request
 
   // allowedHeaders: ['Content-Type', 'x-api-key'], 
 }));
