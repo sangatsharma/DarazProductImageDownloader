@@ -57,7 +57,7 @@ const downloadImages = async (url, format) => {
   }
 };
 
-app.post("/api/download-images", async (req, res) => {
+app.post("/https://sangatsharma.github.io/DarazProductImageDownloader/", async (req, res) => {
   const { url, format } = req.body;
 
   try {
@@ -74,6 +74,6 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "./index.html"));
+  res.sendFile(path.join(__dirname, "/https://sangatsharma.github.io/DarazProductImageDownloader/"));
 });
 module.exports = app;
