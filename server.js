@@ -4,24 +4,25 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const app = express();
 app.use(bodyParser.json());
-const cors = require('cors');
+const cors = require("cors");
 
 // Enable CORS to allow requests from your frontend
-app.use(cors({
-  origin: ['https://sangatsharma.github.io/DarazProductImageDownloader'], // Replace with your frontend URL
-  methods: ['GET', 'POST'], // Allowed methods
-   allowedHeaders: ['Content-Type'], // Allowed headers
-    preflightContinue: false, // Stop preflight request
+app.use(
+  cors({
+    origin: ["https://sangatsharma.github.io/DarazProductImageDownloader/"], // Replace with your frontend URL
+    methods: ["GET", "POST"], // Allowed methods
+    allowedHeaders: ["Content-Type"], // Allowed headers
+    preflightContinue: true, // Stop preflight request
 
-  // allowedHeaders: ['Content-Type', 'x-api-key'], 
-}));
+    // allowedHeaders: ['Content-Type', 'x-api-key'],
+  })
+);
 
 const downloadImages = async (url, format) => {
   try {
-
     const browser = await puppeteer.launch({
       // Specify a custom cache path
-      userDataDir: '/path/to/your/cache/directory',
+      userDataDir: "/path/to/your/cache/directory",
     });
     const page = await browser.newPage();
 
@@ -91,7 +92,6 @@ app.listen(PORT, () => {
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./index.html"));
-
 });
 
 module.exports = app;
