@@ -5,6 +5,7 @@ const path = require("path");
 const app = express();
 app.use(bodyParser.json());
 const cors = require('cors');
+app.use(cors());
 // Enable CORS to allow requests from your frontend
 app.use(cors({
   origin: 'https://sangatsharma.github.io/DarazProductImageDownloader/', // Replace with your frontend URL
