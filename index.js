@@ -1,5 +1,3 @@
-
-
 const puppeteer = require("puppeteer");
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -70,11 +68,11 @@ app.post("/download-images", async (req, res) => {
     res.status(500).json({ error: "Failed to download images" });
   }
 });
-app.use(express.static(path.join(__dirname, "../dist/index.html")));
+app.use(express.static(path.join(__dirname, "./index.html")));
 const PORT = process.env.PORT || 5500;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../dist/index.html"));
+  res.sendFile(path.join(__dirname, "./index.html"));
 });

@@ -1,21 +1,9 @@
 {
   "dependencies": {
     "axios": "^1.6.8",
-    "chokidar": "^2.1.8",
+    "cheerio": "^1.0.0-rc.12",
     "express": "^4.19.2",
-    "glob-parent": "^5.1.2",
-    "netlify-cli": "^17.23.5",
-    "netlify-lambda": "^2.0.16",
-    "puppeteer": "^22.9.0",
-    "watchpack": "^2.4.1",
-    "watchpack-chokidar2": "^2.0.1",
-    "webpack": "^5.91.0"
-  },    
-  "scripts": {
-    "build": "netlify deploy --prod"
-  }
-  
-  
-  
-  
+    "puppeteer": "^22.9.0"
+  },"scripts":{
+    "start": "node index.js"}
 }
