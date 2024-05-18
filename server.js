@@ -5,9 +5,12 @@ const path = require("path");
 const app = express();
 app.use(bodyParser.json());
 const cors = require('cors');
-app.use(cors());
-// Middleware to parse JSON body
-
+// Enable CORS to allow requests from your frontend
+app.use(cors({
+  origin: 'https://sangatsharma.github.io/DarazProductImageDownloader/', // Replace with your frontend URL
+  methods: ['GET', 'POST'], // Allowed methods
+  allowedHeaders: ['Content-Type', 'x-api-key'], // Allowed headers
+}));
 
 const downloadImages = async (url, format) => {
   try {
