@@ -7,7 +7,6 @@
       }
     ],
     "routes": [
-      { "handle": "server" },
       {
         "src": "/(.*)",
         "dest": "/server.js"
