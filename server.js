@@ -6,10 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 const cors = require('cors');
 const browser = await puppeteer.launch({executablePath: '/path/to/Chrome'});
-module.exports = {
-  // Changes the cache location for Puppeteer.
-  cacheDirectory: join(__dirname, '.cache', 'puppeteer'),
-};
+
 // Enable CORS to allow requests from your frontend
 app.use(cors({
   origin: ['https://sangatsharma.github.io/DarazProductImageDownloader'], // Replace with your frontend URL
@@ -95,3 +92,7 @@ app.get("/", (req, res) => {
 });
 
 module.exports = app;
+module.exports = {
+  // Changes the cache location for Puppeteer.
+  cacheDirectory: join(__dirname, '.cache', 'puppeteer'),
+};
