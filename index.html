@@ -156,7 +156,7 @@
 
           // Make an API call to your Express server to download images
           try {
-            const response = await fetch("/download-images", {
+            const response = await fetch("/api/download-images", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
