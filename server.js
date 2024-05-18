@@ -5,7 +5,6 @@ const path = require("path");
 const app = express();
 app.use(bodyParser.json());
 const cors = require('cors');
-const browser = await puppeteer.launch({executablePath: '/path/to/Chrome'});
 
 // Enable CORS to allow requests from your frontend
 app.use(cors({
