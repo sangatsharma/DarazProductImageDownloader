@@ -1,7 +1,14 @@
 {
   "dependencies": {
     "axios": "^1.6.8",
+    "chokidar": "^2.1.8",
     "express": "^4.19.2",
-    "puppeteer": "^22.9.0"
+    "glob-parent": "^5.1.2",
+    "netlify-cli": "^17.23.5",
+    "netlify-lambda": "^2.0.16",
+    "puppeteer": "^22.9.0",
+    "watchpack": "^2.4.1",
+    "watchpack-chokidar2": "^2.0.1",
+    "webpack": "^5.91.0"
   }
 }
