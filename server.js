@@ -4,6 +4,10 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const app = express();
 app.use(bodyParser.json());
+const cors = require('cors');
+app.use(cors());
+// Middleware to parse JSON body
+
 
 const downloadImages = async (url, format) => {
   try {
@@ -57,7 +61,7 @@ const downloadImages = async (url, format) => {
   }
 };
 
-app.post("/https://sangatsharma.github.io/DarazProductImageDownloader/", async (req, res) => {
+app.post("/api/download-images", async (req, res) => {
   const { url, format } = req.body;
 
   try {
@@ -74,6 +78,6 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/https://sangatsharma.github.io/DarazProductImageDownloader/"));
+  res.sendFile(path.join(__dirname, "./index.html"));
 });
 module.exports = app;
