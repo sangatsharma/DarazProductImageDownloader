@@ -57,7 +57,7 @@ const downloadImages = async (url, format) => {
   }
 };
 
-app.post("/download-images", async (req, res) => {
+app.post("/api/download-images", async (req, res) => {
   const { url, format } = req.body;
 
   try {
