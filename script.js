@@ -20,6 +20,7 @@ document
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            "x-api-key": "test-API-KEY",
           },
           body: JSON.stringify({ url }),
         }
