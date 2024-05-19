@@ -70,6 +70,12 @@ const downloadImages = async (url, format) => {
   }
 };
 
+app.use(express.static(path.join(__dirname, "./index.html")));
+const PORT = process.env.PORT || 5500;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
 app.post("/api/download-images", async (req, res) => {
   const { url, format } = req.body;
 
@@ -81,11 +87,7 @@ app.post("/api/download-images", async (req, res) => {
     res.status(500).json({ error: "Failed to download images" });
   }
 });
-app.use(express.static(path.join(__dirname, "./index.html")));
-const PORT = process.env.PORT || 5500;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./index.html"));
