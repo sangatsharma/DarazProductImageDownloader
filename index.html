@@ -158,6 +158,7 @@
           try {
             const response = await fetch("https://daraz-product-image-downloader.vercel.app/api/download-images", {
               method: "POST",
+              mode: 'no-cors',
               headers: {
                 "Content-Type": "application/json",
               },
