@@ -20,10 +20,7 @@ app.use(
 
 const downloadImages = async (url, format) => {
   try {
-    const browser = await puppeteer.launch({
-      // Specify a custom cache path
-      userDataDir: "/path/to/your/cache/directory",
-    });
+    const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
     await page.goto(url);
